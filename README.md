@@ -1,4 +1,4 @@
-# 2020p3web-own-rest-api-JanDostal
+# spsse-web-own-rest-api
 ## Schéma
 ![Konceptuální model](/plán/IMG_20210701_113127.jpg)
 ## Modely
