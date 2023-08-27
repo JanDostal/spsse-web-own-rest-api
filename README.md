@@ -1,8 +1,30 @@
-# spsse-web-own-rest-api
+# Popis aplikace
+
+- Jedná se REST API
+- Aplikace se spouští jako webová aplikace obsahující Swagger dokumentaci, která umožňuje volat API
+- API pracuje se studenty a třídami a jsou zde základní CRUD operace, ale i pokročilešjí funkce
+
+## Informace o vývoji
+
+- Aplikace se vyvíjela v období červenec 2021
+- Aplikace byla ze školního Github repozitáře nahrána do tohoto repozitáře v květnu 2022, tedy ke konci 4. ročníku střední školy
+
+## Instrukce pro spuštění
+
+1. Otevřete aplikaci ve **Visual Studio**
+2. Stiskněte **start button (zelená šipka)** na hlavním toolbaru Visual Studia
+    - Není potřeba spouštět příkaz ***Update-Database***, tato aplikace toto provádí automaticky
+
+# Návrh aplikace
+
 ## Schéma
+
 ![Konceptuální model](/plán/IMG_20210701_113127.jpg)
+
 ## Modely
+
 ### Třídy
+
 Akce | Metoda | Endpoint | Výsledek
 ---- | ------ | -------- | --------
 Vytvořit novou třídu | POST | api/classes + body | Created, Bad Request
