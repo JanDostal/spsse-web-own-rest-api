@@ -2,7 +2,7 @@
 
 - Jedná se REST API
 - Aplikace se spouští jako webová aplikace obsahující Swagger dokumentaci, která umožňuje volat API
-- API pracuje se studenty a třídami a jsou zde základní CRUD operace, ale i pokročilešjí funkce
+- API pracuje se studenty a třídami a jsou zde základní CRUD operace, ale i pokročilejší funkce
 
 ## Informace o vývoji
 
