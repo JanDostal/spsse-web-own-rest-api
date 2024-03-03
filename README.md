@@ -1,42 +1,42 @@
-# Popis aplikace
+# App description
 
-- Aplikace se spouští jako webová aplikace obsahující REST API a Swagger dokumentaci, která umožňuje volat API
-- API pracuje se studenty a třídami a jsou zde základní CRUD operace, ale i pokročilejší funkce
+- This application runs as a web application containing a REST API and Swagger documentation that allows API calls
+- The API works with students and classes and there are basic CRUD operations, but also more advanced functions
 
-## Informace o vývoji
+## Development info
 
-- Aplikace se vyvíjela v období červenec 2021
-- Aplikace byla ze školního Github repozitáře nahrána do tohoto repozitáře v květnu 2022, tedy ke konci 4. ročníku střední školy
+- App was being developed in the period july 2021
+- App was uploaded from school repository to this repository in may 2022, which was at the end in the last year of secondary school
 
-## Instrukce pro spuštění
+## Instructions for starting app
 
-1. Otevřete aplikaci ve **Visual Studio**
-2. Stiskněte **start button (zelená šipka)** na hlavním toolbaru Visual Studia
-    - Není potřeba spouštět příkaz ***Update-Database***, tato aplikace toto provádí automaticky
+1. Open App in **Visual Studio**
+2. Press **start button (green arrow)** on the main Visual Studio toolbar
+    - You don't need to run command ***Update-Database***, this application does it automatically
 
-# Návrh aplikace
+# App design
 
-## Schéma
+## Diagram
 
-![Konceptuální model](/plán/IMG_20210701_113127.jpg)
+![Conceptual schema](/plán/IMG_20210701_113127.jpg)
 
-## Modely
+## Data models
 
-### Třídy
+### Classes
 
-Akce | Metoda | Endpoint | Výsledek
+Action | Method | Endpoint | Result
 ---- | ------ | -------- | --------
-Vytvořit novou třídu | POST | api/classes + body | Created, Bad Request
-Smazat třídu | DELETE | api/classes/{classId} | No content, Not found, Bad request
-Upravit třídu | PUT | api/classes/{classId} + body | Ok, No content, Not found, Bad request
-Získat třídu podle id | GET | api/classes/{classId} | Trida - Ok, Not found, Bad request
-Získat seznam tříd podle parametrů | GET | api/classes[grade?][educationLevel?][codeDesignation?] | List\<Trida\> - Ok, No content, Bad request
-Získat seznam tříd, které už byly ukončeny, podle úrovně vzdělání | GET | api/classes/ended{educationLevel} | List\<Trida\> - Ok, No content, Bad request
-Získat počet studentů v třídě dle id třídy | GET | api/classes/{classId}/students/count | int - Ok, Not found, Bad request
-Získat seznam studentů, kterým už bylo 18 let, dle id třídy | GET | api/classes/{classId}/students/adult | List\<Student\> - Ok, No content, Not found, Bad request
-Získat seznam studentů v dané třídě dle id třídy | GET | api/classes/{classId}/students | List\<Student\> - Ok, No content, Not found, Bad request
+Create a new class | POST | api/classes + body | Created, Bad Request
+Delete class | DELETE | api/classes/{classId} | No content, Not found, Bad request
+Edit class | PUT | api/classes/{classId} + body | Ok, No content, Not found, Bad request
+Get class by id | GET | api/classes/{classId} | Trida - Ok, Not found, Bad request
+Get list of classes by parameters | GET | api/classes[grade?][educationLevel?][codeDesignation?] | List\<Trida\> - Ok, No content, Bad request
+Get a list of classes that have already ended, by education level | GET | api/classes/ended{educationLevel} | List\<Trida\> - Ok, No content, Bad request
+Get the number of students in a class by class id | GET | api/classes/{classId}/students/count | int - Ok, Not found, Bad request
+Get a list of students, who have turned 18 years old, by class id | GET | api/classes/{classId}/students/adult | List\<Student\> - Ok, No content, Not found, Bad request
+Get a list of students in a given class by class id | GET | api/classes/{classId}/students | List\<Student\> - Ok, No content, Not found, Bad request
 
-#### POST metoda ukázka
+#### POST method example
 ```
 {
   "kodoveOznaceni": "P",
@@ -46,7 +46,7 @@ Získat seznam studentů v dané třídě dle id třídy | GET | api/classes/{cl
 }
 ```
 
-#### PUT metoda ukázka
+#### PUT method example
 ```
 {
   "kodoveOznaceni": "S",
@@ -56,16 +56,16 @@ Získat seznam studentů v dané třídě dle id třídy | GET | api/classes/{cl
 }
 ```
 
-### Studenti
-Akce | Metoda | Endpoint | Výsledek
+### Students
+Action | Method | Endpoint | Result
 ---- | ------ | -------- | --------
-Vytvořit nového studenta | POST | api/students + body | Created, Bad Request
-Smazat studenta | DELETE | api/students/{studentId} | No content, Not found, Bad request
-Upravit studenta | PUT | api/students/{studentId} + body | Ok, Not found, Bad request
-Získat studenta podle id studenta | GET | api/students/{studentId} | Student - Ok, Not found, Bad request
-Získat studenty podle parametrů | GET | api/students[age?][gender?] | List\<Student\> - Ok, No content, Bad request
+Create a new student | POST | api/students + body | Created, Bad Request
+Delete student | DELETE | api/students/{studentId} | No content, Not found, Bad request
+Edit student | PUT | api/students/{studentId} + body | Ok, Not found, Bad request
+Get student by student id | GET | api/students/{studentId} | Student - Ok, Not found, Bad request
+Get students by parameters | GET | api/students[age?][gender?] | List\<Student\> - Ok, No content, Bad request
 
-#### POST metoda ukázka
+#### POST method example
 ```
 {
   "jmeno": "Jan",
@@ -77,7 +77,7 @@ Získat studenty podle parametrů | GET | api/students[age?][gender?] | List\<St
 }
 ```
 
-#### PUT metoda ukázka
+#### PUT method example
 ```
 {
   "jmeno": "Cyril",
