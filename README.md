@@ -18,7 +18,7 @@
 
 ## Diagram
 
-![Conceptual schema](/plán/IMG_20210701_113127.jpg)
+![Conceptual schema](/plan/IMG_20210701_113127.jpg)
 
 ## Data models
 
