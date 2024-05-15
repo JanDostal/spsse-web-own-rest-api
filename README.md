@@ -5,8 +5,8 @@
 
 ## Development info
 
-- App was being developed in the period july 2021
-- App was uploaded from school repository to this repository in may 2022, which was at the end in the last year of secondary school
+- App was being developed in the period July 2021
+- App was uploaded from school repository to this repository in May 2022, which was at the end in the last year of secondary school
 
 ## Instructions for starting app
 
